@@ -1,8 +1,14 @@
 html,
 body {
   height: 100%;
+  margin: 20px;
+  padding: 0;
+}
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .save-note {
@@ -14,6 +20,11 @@ body {
   margin-right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.current-note {
+  border-right: 2px solid rgb(168, 185, 192);
+  border-bottom: 2px solid rgb(168, 185, 192);
 }
 
 .note-textarea,
@@ -41,15 +52,20 @@ body {
   color: #757575;
 }
 
+.navbar {
+  border: 2px solid rgb(168, 185, 192);
+}
+
 .list-container .card {
-  height: calc(100vh - 70px);
-  border-bottom: none;
+  height: calc(100vh - 100px);
+  border: 2px solid rgb(168, 185, 192);
+  /* border-bottom: none; */
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .list-container {
-  padding-left: 0;
+  padding: 0;
 }
 
 .list-container .list-group,
@@ -58,6 +74,27 @@ body {
   border-top: none;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+.list-group li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(77, 77, 77);
+  padding: 15px;
+  /* background-color: pink; */
+  border-bottom: 2px solid rgb(168, 185, 192);
+}
+
+.list-group .list-item {
+  word-break: break-all;
+  width: 190px;
+  margin-bottom: 0px;
+}
+
+.list-group span {
+  font-size: 16px;
+  color: rgb(241, 14, 31);
 }
 
 .list-item-title {
