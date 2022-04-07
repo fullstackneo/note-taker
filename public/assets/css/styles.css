@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-  margin: 20px;
   padding: 0;
 }
 
@@ -42,7 +41,7 @@ body {
 }
 
 .note-title {
-  height: 60px;
+  height: 50px;
   margin-top: 13px;
   font-size: 3rem;
 }
