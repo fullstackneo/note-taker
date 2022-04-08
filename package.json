@@ -5,12 +5,13 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {
     "jest": "^27.5.1"
