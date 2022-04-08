@@ -1,11 +1,18 @@
 const router = require('express').Router();
 const path = require('path');
 
-router.use('/notes', (req, res) => {
+// redirect to homepage 
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../public/index.html'));
+});
+
+// redirect to notes page 
+router.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public/notes.html'));
 });
 
-router.use('/', (req, res) => {
+// all other url request will go to homepage 
+router.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
 

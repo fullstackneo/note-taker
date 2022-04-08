@@ -3,15 +3,14 @@ const fs = require('fs');
 const path = require('path');
 const notes = require('../../db/db.json');
 
+// get all the notes 
 router.get('/notes', (req, res) => {
   res.send(notes);
 });
 
+// add notes 
 router.post('/notes', (req, res) => {
   let id = parseInt(new Date().getTime() / 1000).toString(16);
-
-  console.log(req.body);
-  // save body to database
   notes.push({
     id: id,
     title: req.body.title,
@@ -33,6 +32,8 @@ router.post('/notes', (req, res) => {
   });
 });
 
+
+// delete note
 router.delete('/notes/:id', (req, res) => {
   notes.some((el, index) => {
     console.log(el);
