@@ -6,9 +6,9 @@
 
 ## Demo
 
-![image](https://github.com/fullstackneo/note-taker/blob/main/assets/screenshots/homepage.png)
+![image](https://github.com/fullstackneo/note-taker/blob/main/public/assets/screenshots/homepage.png)
 
-![image](https://github.com/fullstackneo/note-taker/blob/main/assets/screenshots/notepage.png)
+![image](https://github.com/fullstackneo/note-taker/blob/main/public/assets/screenshots/notepage.png)
 
 ## Link
 
