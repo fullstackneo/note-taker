@@ -13,7 +13,7 @@
 ## Link
 
 - Web App: 
-- Repository: https://github.com/fullstackneo/weather-dashboard
+- Repository: https://github.com/fullstackneo/note-taker
 
 ## Skills
 
