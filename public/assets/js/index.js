@@ -3,6 +3,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+let noteItem;
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -71,12 +72,10 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
-  // saveNote(newNote).then(() => {
-  //   getAndRenderNotes();
-  //   renderActiveNote();
-  // });
-  getAndRenderNotes();
-  renderActiveNote();
+  saveNote(newNote).then(() => {
+    getAndRenderNotes();
+    renderActiveNote();
+  });
 };
 
 // Delete the clicked note
@@ -86,6 +85,7 @@ const handleNoteDelete = e => {
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  console.log(noteId);
 
   if (activeNote.id === noteId) {
     activeNote = {};
@@ -98,9 +98,11 @@ const handleNoteDelete = e => {
 };
 
 // Sets the activeNote and displays it
-const handleNoteView = e => {
+const handleNoteView = function (e) {
   e.preventDefault();
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
+  console.log(activeNote);
+
   renderActiveNote();
 };
 
@@ -164,7 +166,6 @@ const renderNoteList = async notes => {
   if (window.location.pathname === '/notes') {
     noteListItems.forEach(note => noteList[0].append(note));
   }
-
 };
 
 // Gets notes from the db and renders them to the sidebar
@@ -176,6 +177,5 @@ if (window.location.pathname === '/notes') {
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
-
 
 getAndRenderNotes();
